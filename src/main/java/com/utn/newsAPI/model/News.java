@@ -14,7 +14,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @RequiredArgsConstructor // lombok
-@NoArgsConstructor // lombok
 @Setter  // lombok
 @Getter  // lombok
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "typeNews", visible = true)
@@ -27,7 +26,7 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // Type of DB inheritance
 public abstract class News {
     @Id // identifies the next attribute as the entity's primary key.
-    private Integer newsId;
+    private Integer id;
     private String title;
     private String description;
 

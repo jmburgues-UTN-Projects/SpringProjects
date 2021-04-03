@@ -19,6 +19,11 @@ public class NewsController {
         return this.newsService.getAll();
     }
 
+//    @GetMapping("/author/{id}")
+//    public List<News> getAll_ByAuthorId(@PathVariable String id){
+//           return this.newsService.getAll_ByAuthorId(id);
+//        }
+
     @GetMapping("/{id}") // maps the endpoint with this specific method where {id} is a variable
     public News getOne(@PathVariable Integer id){ // PathVaraible maps the variable specified with the endpoint's variable
         return this.newsService.getById(id);

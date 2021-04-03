@@ -3,9 +3,13 @@ package com.utn.newsAPI.service;
 import com.utn.newsAPI.model.News;
 import com.utn.newsAPI.repository.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.MissingPathVariableException;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
+import java.util.MissingFormatArgumentException;
 
 @Service
 public class NewsService {
@@ -14,7 +18,7 @@ public class NewsService {
 
     public News getById(Integer newsId){
         return this.newsRepository.findById(newsId)
-                .orElse(new News());
+                .orElseThrow(() -> new HttpClientErrorException(HttpStatus.NOT_FOUND));
     }
 
     public List<News> getAll(){
@@ -30,4 +34,8 @@ public class NewsService {
 
     }
 
+//    public List<News> getAll_ByAuthorId(String id) {
+//        this.newsRepository.findAllById()
+//
+//    }
 }

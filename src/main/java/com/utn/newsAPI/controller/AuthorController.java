@@ -29,6 +29,11 @@ public class AuthorController {
         this.authorService.add(a);
     }
 
+    @PutMapping("/{id]/news/{idNews}")
+    public void addNewsToAuthor(@PathVariable String id, @PathVariable Integer idNews){
+        this.authorService.addNewsToAuthor(id,idNews);
+    }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id){
         this.authorService.delete(id);
