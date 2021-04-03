@@ -1,12 +1,11 @@
-package com.utn.restTest.service;
+package com.utn.newsAPI.service;
 
-import com.utn.restTest.model.News;
-import com.utn.restTest.repository.NewsRepository;
+import com.utn.newsAPI.model.News;
+import com.utn.newsAPI.repository.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class NewsService {

@@ -1,13 +1,13 @@
-package com.utn.restTest;
+package com.utn.newsAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestTestApplication {
+public class NewsApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestTestApplication.class, args);
+		SpringApplication.run(NewsApiApplication.class, args);
 	}
 
 }

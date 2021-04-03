@@ -1,10 +1,10 @@
-package com.utn.restTest;
+package com.utn.newsAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestTestApplicationTests {
+class NewsApiApplicationTests {
 
 	@Test
 	void contextLoads() {
