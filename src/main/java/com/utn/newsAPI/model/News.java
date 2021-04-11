@@ -2,10 +2,7 @@ package com.utn.newsAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.AccessType;
 
 import javax.persistence.Entity;
@@ -13,9 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-@RequiredArgsConstructor // lombok
-@Setter  // lombok
-@Getter  // lombok
+@NoArgsConstructor // lombok
+@Data  // lombok
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "typeNews", visible = true)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Text.class, name = "TEXT"),

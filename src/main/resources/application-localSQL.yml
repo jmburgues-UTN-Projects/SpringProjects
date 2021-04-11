@@ -1,9 +1,0 @@
-spring:
-  h2:
-    console:
-      enabled: true
-      path: /console
-  datasource:
-    url: localhost:36033
-  jpa:
-    show-sql: true

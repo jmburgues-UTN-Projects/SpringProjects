@@ -1,18 +1,20 @@
 package com.utn.newsAPI.model;
 
-
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@RequiredArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 public class Author {
     @Id
     private String userName;
+    @NotNull(message = "userName field in Author is required.")
     private String fullName;
+    @NotNull(message = "password field in Author is required")
     private String password;
 
     @OneToMany(fetch = FetchType.EAGER)
